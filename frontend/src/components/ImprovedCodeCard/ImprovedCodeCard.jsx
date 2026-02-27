@@ -1,5 +1,5 @@
 import React from "react";
-import "./ImprovedCodeCard.css";
+import "../css/ImprovedCodeCard.css";
 
 function ImprovedCodeCard({ version, code, explanation, isBest, onCopy, copied }) {
   return (

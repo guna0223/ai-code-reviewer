@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ImprovedCodeCard from "../ImprovedCodeCard/ImprovedCodeCard";
-import "./CodeResult.css";
+import "../css/CodeResult.css";
 
 function CodeResult({ result }) {
   const [copiedIndex, setCopiedIndex] = useState(null);

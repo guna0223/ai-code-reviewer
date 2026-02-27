@@ -1,5 +1,5 @@
 import React from "react";
-import "./DocumentationPanel.css";
+import "../css/DocumentationPanel.css";
 
 function DocumentationPanel({ documentation }) {
   const formatMarkdown = (text) => {

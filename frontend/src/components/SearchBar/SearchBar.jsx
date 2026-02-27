@@ -1,5 +1,5 @@
 import React from "react";
-import "./SearchBar.css";
+import "../css/SearchBar.css";
 
 function SearchBar({ value, onChange, onSubmit, loading }) {
   const handleKeyPress = (e) => {
