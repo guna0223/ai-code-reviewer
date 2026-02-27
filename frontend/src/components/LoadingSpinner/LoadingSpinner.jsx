@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/LoadingSpinner.css";
+
 
 function LoadingSpinner({ size = "medium" }) {
   return (

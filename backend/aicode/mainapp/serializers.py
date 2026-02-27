@@ -18,17 +18,22 @@ class ImprovedVersionSerializer(serializers.Serializer):
     explanation = serializers.CharField()
 
 
+class ErrorInfoSerializer(serializers.Serializer):
+    message = serializers.CharField(required=False)
+    line = serializers.IntegerField(required=False)
+    column = serializers.IntegerField(required=False)
+    text = serializers.CharField(required=False)
+    fixed = serializers.BooleanField(required=False)
+    fix_message = serializers.CharField(required=False)
+
+
 class AnalyzeOutputSerializer(serializers.Serializer):
     type = serializers.CharField()
-    error = serializers.CharField(required=False, allow_blank=True)
+    is_valid = serializers.BooleanField()
+    error = ErrorInfoSerializer(required=False)
     corrected_code = serializers.CharField(required=False, allow_blank=True)
     improved_versions = ImprovedVersionSerializer(many=True, required=False)
     best_version = serializers.IntegerField(required=False)
     answer = serializers.CharField(required=False, allow_blank=True)
     example_code = serializers.CharField(required=False, allow_blank=True)
-    best_practices = serializers.ListField(
-        child=serializers.CharField(),
-        required=False
-    )
-    explanation = serializers.CharField(required=False, allow_blank=True)
     documentation = serializers.CharField(required=False, allow_blank=True)
