@@ -37,3 +37,4 @@ class AnalyzeOutputSerializer(serializers.Serializer):
     answer = serializers.CharField(required=False, allow_blank=True)
     example_code = serializers.CharField(required=False, allow_blank=True)
     documentation = serializers.CharField(required=False, allow_blank=True)
+    output = serializers.CharField(required=False, allow_blank=True)
