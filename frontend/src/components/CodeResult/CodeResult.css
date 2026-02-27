@@ -1,0 +1,134 @@
+.code-result {
+  margin-top: 16px;
+}
+
+.error-box {
+  display: flex;
+  gap: 12px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid #ef4444;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.error-icon {
+  color: #fca5a5;
+  flex-shrink: 0;
+}
+
+.error-content {
+  flex: 1;
+  color: #fca5a5;
+  font-size: 14px;
+}
+
+.error-content strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.error-content pre {
+  margin: 0;
+  font-family: 'Fira Code', 'Consolas', monospace;
+  font-size: 13px;
+  white-space: pre-wrap;
+}
+
+.corrected-code-section,
+.improved-versions-section {
+  margin-bottom: 24px;
+}
+
+.corrected-code-section h4,
+.improved-versions-section h4 {
+  color: #f1f5f9;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+.corrected-code-card {
+  position: relative;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.corrected-code-card pre {
+  margin: 0;
+  padding: 16px;
+  overflow-x: auto;
+}
+
+.corrected-code-card code {
+  font-family: 'Fira Code', 'Consolas', monospace;
+  font-size: 14px;
+  color: #10b981;
+  line-height: 1.6;
+}
+
+.copy-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #334155;
+  border: none;
+  border-radius: 6px;
+  padding: 8px;
+  cursor: pointer;
+  color: #94a3b8;
+  transition: all 0.2s ease;
+}
+
+.copy-button:hover {
+  background: #475569;
+  color: #f1f5f9;
+}
+
+.improved-versions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.improved-version-wrapper {
+  animation: fadeInUp 0.3s ease;
+  animation-fill-mode: both;
+}
+
+.improved-version-wrapper:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.improved-version-wrapper:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.improved-version-wrapper:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -7,3 +7,7 @@ const API = axios.create({
 export const submitCode = (code) => {
   return API.post("aicode/", { code });
 };
+
+export const analyzeInput = (query) => {
+  return API.post("analyze/", { query });
+};
